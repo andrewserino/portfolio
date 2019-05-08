@@ -604,39 +604,92 @@
 
     </section>
 
-    <section class="portfolio" id="portfolio">
-
+    <div class="container">
         <h2>Portfolio</h2>
-
-        <div class="row-halves"></div>
-            <div class="col">
-                <img src="./img/serinopic.jpg" alt="">
-                <h3>Cinema Project</h3>
-                <p>
-                    This is a fun project where I used HTML, CSS, Boostrap, and JavaScript to create 
-                    a fun website where you can view moveis and showtimes.
-                </p>
+        <p>Here are some projects I've been working on consitently.</p>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-warning btn-md" id="myBtn">Project # 1</button>
+        <button type="button" class="btn btn-warning btn-md" id="myBtn2">Project # 2</button>
+        <button type="button" class="btn btn-warning btn-md" id="myBtn3">Project # 3</button>
+      
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Project Number 1</h4>
+              </div>
+              <div class="modal-body">
+                <p>This is the text for where I will put in Project Number 1 and with a direct link to view the code for the project.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+              </div>
             </div>
-
-            <div class="row-halves"></div>
-            <div class="col">
-                <img src="./img/serinopic.jpg" alt="">
-                <h3>Other Project</h3>
-                <p>
-                   This will be the text where I share about another project I'm working on...
-                </p>
+            
+          </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="myModal2" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">Project # 2</h4>
+              </div>
+              <div class="modal-body">
+                <p>Project Number 2</p>
+                <p>This is the text for where I will put in Project Number 2 and with a direct link to view the code for the project.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+              </div>
             </div>
-
-            <div class="row-halves"></div>
-            <div class="col">
-                <img src="./img/serinopic.jpg" alt="">
-                <h3>Another Project</h3>
-                <p>
-                    This will be the text where I share about another project I'm working on...
-                </p>
+            
+          </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="myModal3" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">Project Number 3</h4>
+              </div>
+              <div class="modal-body">
+                <p>This is the text for where I will put in Project Number 1 and with a direct link to view the code for the project.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+              </div>
             </div>
-
-    </section>
+            
+          </div>
+        </div>
+      </div>
+       
+      <script>
+      $(document).ready(function(){
+        $("#myBtn").click(function(){
+          $("#myModal").modal({backdrop: true});
+        });
+        $("#myBtn2").click(function(){
+          $("#myModal2").modal({backdrop: false});
+        });
+        $("#myBtn3").click(function(){
+          $("#myModal3").modal({backdrop: "static"});
+        });
+      });
+      </script>
 
     <section class="contact" id="contact">
 
@@ -668,7 +721,6 @@
                 <section class="bottom-bar"></section>
                     <p>&copy; 2019 | All rights reserved</p>
         </footer>
-
 
 
 
